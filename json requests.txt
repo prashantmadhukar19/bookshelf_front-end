@@ -1,0 +1,53 @@
+{
+        "bookId": 1001,
+        "bookTitle": "aa",
+        "bookAuthor": "a",
+        "bookGenre": "a",
+        "bookPublisher": "a",
+        "bookPrice": 1,
+        "bookQuantity": 1,
+        "isAvailable": null
+}
+
+
+
+
+{
+        "memberId": 1001,
+        "memberPassword": null,
+        "memberDob": "2020-01-02T06:47:24.000+0000",
+        "memberAddress": "a",
+        "memberEmail": "aaa",
+        "bookCopyIssued": null,
+        "fineAccumulated": 0,
+        "wishedBooksAvailable": null,
+        "suspended": false
+    }
+
+
+
+{
+    "adminId": 1000,
+    "adminName": "madhukar",
+    "adminPassword": "abcxyz",
+    "adminDob": "1996-06-18T18:30:00.000+0000",
+    "adminAddress": "gurgaon",
+    "adminEmail": "a@z.com"
+}
+
+
+
+git init
+
+git add .  
+
+git commit -m "first commit"  
+
+git remote add origin https://github.com/prashantmadhukar19/bookshelf_front-end.git 
+
+git push -u origin master
+
+
+git config user.email "correct@new.email"
+
+git config user.name "Correct new name"
