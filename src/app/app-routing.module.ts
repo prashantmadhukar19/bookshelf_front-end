@@ -25,6 +25,7 @@ import { AdminAuthgaurdService } from './authgaurd/admin-authgaurd.service';
 import { RemoveBookComponent } from './remove-book/remove-book.component';
 import { ViewAllBooksAdminComponent } from './view-all-books-admin/view-all-books-admin.component';
 import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
 
 
 
@@ -42,6 +43,8 @@ const routes: Route[] = [
   {path:'remove-book',component:RemoveBookComponent,canActivate:[AdminAuthgaurdService]},
   {path:'search-member',component:SearchMemberComponent,canActivate:[AdminAuthgaurdService]},
   
+  {path:'update-book',component:UpdateBookComponent,canActivate:[AdminAuthgaurdService]},
+
   {path:'add-book', component:AddBookComponent,canActivate:[AdminAuthgaurdService]},
   {path:'view-admin-profile',component:ViewAdminProfileComponent},
   {path:'admin-homepage',component:AdminHomepageComponent,canActivate:[AdminAuthgaurdService]},

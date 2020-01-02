@@ -18,6 +18,10 @@ export class BookService {
     return this.httpClient.post('http://localhost:8080/books',bookObj);
   }
 
+  updateBooks(bookObj:Book ,bookId : number){    
+    return this.httpClient.put('http://localhost:8080/books/'+bookId,bookObj);
+  }
+
   getBooksById(bookId : number){
     return this.httpClient.get<Book>('http://localhost:8080/books/'+bookId);
   }

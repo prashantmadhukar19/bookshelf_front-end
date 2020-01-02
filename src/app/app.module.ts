@@ -36,6 +36,7 @@ import { AdminService } from './Services/admin.service';
 import { ViewAllBooksAdminComponent } from './view-all-books-admin/view-all-books-admin.component';
 import { DatePipe } from '@angular/common';
 import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { AdminHomepageComponent } from './admin-homepage/admin-homepage.componen
     LoginNavComponent,
     RemoveBookComponent,
     ViewAllBooksAdminComponent,
-    AdminHomepageComponent
+    AdminHomepageComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,
