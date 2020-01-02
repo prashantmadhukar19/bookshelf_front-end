@@ -35,19 +35,3 @@
     "adminEmail": "a@z.com"
 }
 
-
-
-git init
-
-git add .  
-
-git commit -m "first commit"  
-
-git remote add origin https://github.com/prashantmadhukar19/bookshelf_front-end.git 
-
-git push -u origin master
-
-
-git config user.email "correct@new.email"
-
-git config user.name "Correct new name"
