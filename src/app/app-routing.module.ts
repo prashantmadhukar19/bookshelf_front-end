@@ -44,6 +44,7 @@ const routes: Route[] = [
   {path:'search-member',component:SearchMemberComponent,canActivate:[AdminAuthgaurdService]},
   
   {path:'update-book',component:UpdateBookComponent,canActivate:[AdminAuthgaurdService]},
+  {path:'update-book/:id',component:UpdateBookComponent,canActivate:[AdminAuthgaurdService]},
 
   {path:'add-book', component:AddBookComponent,canActivate:[AdminAuthgaurdService]},
   {path:'view-admin-profile',component:ViewAdminProfileComponent},

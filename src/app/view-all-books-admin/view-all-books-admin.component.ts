@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../Services/book.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-books-admin',
@@ -9,13 +10,11 @@ import { BookService } from '../Services/book.service';
 export class ViewAllBooksAdminComponent implements OnInit {
 
   books: any[];
+  
   private usr:boolean;
 
-  constructor(private svc: BookService) { 
-    this.svc.getBooks().subscribe(
-      response => this.books=response
-    );
-    
+  constructor(private svc: BookService,private router:Router,private http : BookService) { 
+    this.refresh();
     if(sessionStorage.getItem('email')!=null){
       this.usr=true;
     }
@@ -25,10 +24,32 @@ export class ViewAllBooksAdminComponent implements OnInit {
     
   }
   
+  
 
-  ngOnInit() {
-    
+  ngOnInit() {  }
+
+
+
+  refresh(){
+    this.svc.getBooks().subscribe(
+      response => this.books=response
+    );
   }
+
+  deleteBook(bookId){
+    
+    return this.http.removeBook(bookId).subscribe(err=>
+      {
+      console.log("successful");
+      alert("Book Successfully Deleted");
+      this.refresh();
+      });
+      
+  }
+
+  // update(){
+  //   this.router.navigate(['update-book']);
+  // }
   
 
 }

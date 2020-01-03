@@ -14,7 +14,7 @@ export class AdminService {
     user.adminEmail=email;
     user.adminPassword=password;
     console.log(email+"  "+password);
-    return this.httpClient.post<Admin>('http://localhost:8080/adminlogin',user);
+    return this.httpClient.post<Admin>('http://localhost:8081/adminlogin',user);
   }
   
 }

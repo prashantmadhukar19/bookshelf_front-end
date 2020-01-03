@@ -11,6 +11,8 @@
                 <th scope="col">Publisher</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
+                <th scope="col">Update</th>
+                <th scope="col">Remove</th>
               </tr>
             </thead>
             <tbody>
@@ -21,6 +23,8 @@
                 <td>{{book.bookPublisher}}</td>
                 <td>{{book.bookPrice}}</td>
                 <td>{{book.bookQuantity}}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/update-book', book.bookId]">Update</button></td>
+                <td><button class="btn btn-danger" (click)="deleteBook(book.bookId)">Remove</button></td>
               </tr>
             </tbody>
           </table>
